@@ -33,7 +33,7 @@ integration-tests:
     - script:
         name: Copy and test the wercker executable
         code: |
-			   apt-get -y update
+	       apt-get -y update
                apt-get -y install git
                apt-get -y install wget 
                wget --version
@@ -47,7 +47,7 @@ deploy:
     - script:
         name: update certs
         code: |
-			   apt-get -y update
+               apt-get -y update
                apt-get -y install git
                apt-get -y install wget 
                wget --version
@@ -64,7 +64,7 @@ run-tests:
   steps:
       - script:
           code: |
-				 apt-get -y update
+	         apt-get -y update
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
