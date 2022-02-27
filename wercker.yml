@@ -27,8 +27,10 @@ build:
 
 # This pipeline runs the Wercker integration tests in test-all.sh
 integration-tests:
-  box: docker:dind
-  docker: true
+  box: 
+      id: python:2.7-slim
+      ports:
+         - "5000"
   steps:
     - script:
         name: Copy and test the wercker executable
