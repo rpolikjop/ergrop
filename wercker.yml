@@ -4,7 +4,7 @@ box:
   password: $DOCKERHUB_ACCESS_TOKEN
   ports:
     - "5000"
-docker: true
+
 
 dev:
   steps:
@@ -36,7 +36,7 @@ integration-tests:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "5000"
-  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -54,7 +54,7 @@ deploy:
       id : ubuntu
       username: $DOCKERHUB_USERNAME
       password: $DOCKERHUB_ACCESS_TOKEN
-  docker: true
+
 
   steps:
     - script:
@@ -75,7 +75,7 @@ run-tests:
     id: ruby:latest
     username: $DOCKERHUB_USERNAME
     password: $DOCKERHUB_ACCESS_TOKEN
-  docker: true
+
     #volumes: $CODE_PATH /var/run/docker.sock
   steps:
       - script:
@@ -93,7 +93,7 @@ integration-tests1:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
 
   steps:
     - script:
@@ -112,7 +112,7 @@ integration-tests2:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
 
   steps:
     - script:
@@ -131,7 +131,7 @@ integration-tests3:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
 
   steps:
     - script:
@@ -148,7 +148,7 @@ deploy1:
       id : ubuntu
       username: $DOCKERHUB_USERNAME
       password: $DOCKERHUB_ACCESS_TOKEN
-  docker: true
+
 
   steps:
     - script:
@@ -169,7 +169,7 @@ run-tests1:
     id: ruby:latest
     username: $DOCKERHUB_USERNAME
     password: $DOCKERHUB_ACCESS_TOKEN
-  docker: true
+
     #volumes: $CODE_PATH /var/run/docker.sock
   steps:
       - script:
@@ -187,7 +187,7 @@ integration-tests4:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
 
   steps:
     - script:
@@ -206,7 +206,7 @@ integration-tests5:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
 
   steps:
     - script:
@@ -225,7 +225,7 @@ integration-tests6:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
 
   steps:
     - script:
@@ -242,7 +242,7 @@ deploy2:
       id : ubuntu
       username: $DOCKERHUB_USERNAME
       password: $DOCKERHUB_ACCESS_TOKEN
-  docker: true
+
 
   steps:
     - script:
@@ -263,7 +263,7 @@ run-tests2:
     id: ruby:latest
     username: $DOCKERHUB_USERNAME
     password: $DOCKERHUB_ACCESS_TOKEN
-  docker: true
+
 
     #volumes: $CODE_PATH /var/run/docker.sock
   steps:
@@ -282,7 +282,7 @@ integration-tests7:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
 
   steps:
     - script:
@@ -301,7 +301,7 @@ integration-tests8:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
 
   steps:
     - script:
@@ -320,7 +320,7 @@ integration-tests9:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
-  docker: true
+
   
   steps:
     - script:
